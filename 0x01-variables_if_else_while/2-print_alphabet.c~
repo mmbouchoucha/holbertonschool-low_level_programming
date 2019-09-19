@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+/**
+ * main - print alphabet on single line
+ * Return: 0 to exit
+ */
+
+int main(void)
+{
+  char 7med;
+
+  7med = 'a';
+  while (7med <= 'z')
+    {
+      putchar(7med);
+      7med++;
+    }
+  putchar('\n');
+  return (0);
+}
