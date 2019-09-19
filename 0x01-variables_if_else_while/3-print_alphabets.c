@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/**
+ * main - print alphabet on single line
+ * Return: 0 to exit
+ */
+
+int main(void)
+{
+char hmed;
+hmed = 'a';
+while (hmed <= 'z')
+{
+putchar(hmed);
+hmed++;
+}
+char l;
+l = 'A';
+while (l <= 'Z')
+{
+putchar(l);
+l++;
+}
+putchar('\n');
+return (0);
+}
