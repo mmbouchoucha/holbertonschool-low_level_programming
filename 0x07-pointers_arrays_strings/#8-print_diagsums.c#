@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include "holberton.h"
+
+/**
+ * print_diagsums - print the diagonal numbers of a matrix
+ * @a: array
+ * @size: array size
+ *
+ * Return: nothing
+ */
+void print_diagsums(int *a, int size)
+{
+int i, mehdi, sum, sbirina;
+
+i = 0;
+mehdi = 0;
+sum = sbirina = 0;
+
+/* top left to bottom right */
+while (i < (size * size))
+{
+mehdi = a[i];
+sum = sum + mehdi;
+i = i + size + 1;
+}
+
+/* top right to bottom left */
+i = size - 1;
+while (i < ((size * size) - 1))
+{
+init_value = a[i];
+sbirina = sbirina + mehdi;
+i = i + (size - 1);
+}
+printf("%d, %d\n", sum, sbirina);
+}
