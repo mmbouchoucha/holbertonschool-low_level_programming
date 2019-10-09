@@ -6,13 +6,11 @@
  *
  * Return: int length of string
  */
-int _strlen_recursion(char *s)
+int factorial(int n)
 {
-int i;
-
-i = 0;
-if (*s == '\0')
-return (i);
-i++;
-return (i + _strlen_recursion(s + i));
+if (n < 0)
+return (-1);
+else if (n <= 1)
+return (1);
+return (n * factorial(n - 1));
 }

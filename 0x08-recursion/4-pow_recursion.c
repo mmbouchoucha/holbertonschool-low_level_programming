@@ -6,13 +6,12 @@
  *
  * Return: int length of string
  */
-int _strlen_recursion(char *s)
+int _pow_recursion(int x, int y)
 {
-int i;
-
-i = 0;
-if (*s == '\0')
-return (i);
-i++;
-return (i + _strlen_recursion(s + i));
+if (y < 0)
+return (-1);
+else if (y <= 0)
+return (1);
+else
+return (x * _pow_recursion(x, y - 1));
 }
