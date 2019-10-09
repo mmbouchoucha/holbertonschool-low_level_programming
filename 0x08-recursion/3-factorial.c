@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * _strlen_recursion - find and return the length of a string
- * @s: pointer to string
+ * factorial - calculate the factorial of a given number
+ * @n: the number
  *
- * Return: int length of string
+ * Return: int factorial value
  */
 int factorial(int n)
 {
