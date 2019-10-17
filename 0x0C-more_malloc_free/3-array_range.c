@@ -16,7 +16,7 @@ int array_size, i, counter;
 if (min > max)
 return (NULL);
 array_size = (max - min) + 1;
-array = malloc((array_size)*sizeof(*array));
+array = malloc((array_size)*(sizeof(*array)));
 if (array == NULL)
 return (NULL);
 i = min;
