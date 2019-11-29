@@ -1,0 +1,14 @@
+#include "holberton.h"
+/**
+ * get_endianness - check
+ * Return: 0 in big endian, 1 in little endian
+ * 
+ */
+int get_endianness(void)
+{
+  unsigned int x;
+  char *c;
+  x = 1;
+  c = (char *) &x;
+  return ((int)*c);
+}

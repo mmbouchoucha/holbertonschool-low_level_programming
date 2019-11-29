@@ -1,0 +1,42 @@
+#include "holberton.h"
+
+/**
+ * print_binary - print binary code of a number
+ * @n: num
+ *
+ * Return: void
+ */
+void print_binary(unsigned long int n)
+{
+int i, j, k;
+
+if (n == 0)
+{
+_putchar('0');
+return;
+}
+i = (sizeof(unsigned long) * 8) - 1;
+while (i >= 0)
+{
+j = n >> i;
+if (j & 1)
+{
+k = i;
+break;
+}
+else
+{
+i--;
+k = i;
+}
+}
+while (k >= 0)
+{
+j = n >> k;
+if (j & 1)
+_putchar('1');
+else
+_putchar('0');
+k--;
+}
+}
