@@ -1,28 +1,27 @@
 #include "holberton.h"
 /**
- * binary_to_uint - convert a binary num
- * @b: binary
- * Return: unsigned integer
+ * binary_to_uint - converts a binary number to an unsigned integer.
+ * @b: binary representation of the num
+ * Return: the converted number, 0 in character other than 0, 1 or NULL
  */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int u;
-int len, base_two;
-if (!b)
-return (0);
-u = 0;
-for (len = 0; b[len] != '\0'; len++)
-;
-for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
-{
-if (b[len] != '0' && b[len] != '1')
-{
-return (0);
-}
-if (b[len] & 1)
-{
-u += base_two;
-}
-}
-return (u);
+  unsigned int r = 0;
+  unsigned int len = 0, i;
+
+  if (b == NULL)
+    return (0);
+  while (b[len])
+    {
+      if (b[len] != '0' && b[len] != '1')
+	return (0);
+      len++;
+    }
+  len--;
+  for (i = 0; b[i]; i++, len--)
+    {
+      if (b[i] == '1')
+	r += 1 << len;
+    }
+  return (r);
 }
