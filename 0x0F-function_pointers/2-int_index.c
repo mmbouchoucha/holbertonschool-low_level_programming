@@ -2,10 +2,10 @@
 #include "function_pointers.h"
 
 /**
- * int_index - search for integer in an array
+ * int_index - search for int in an arr
  * @array: array name
- * @size: number of array elements
- * @cmp: pointer to function
+ * @size: num of arr elements
+ * @cmp: p to func
  *
  * Return: index of first int value, 0 or -1
  */
