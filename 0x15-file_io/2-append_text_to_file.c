@@ -12,7 +12,7 @@ int len;
 int x;
 if (!filename)
 return (-1);
-ala = open(filename, O_WRONLY | O_APPEND);
+yoyo = open(filename, O_WRONLY | O_APPEND);
 if (yoyo == -1)
 return (-1);
 if (text_content)
