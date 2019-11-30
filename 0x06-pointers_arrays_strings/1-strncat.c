@@ -1,27 +1,27 @@
 #include "holberton.h"
 
 /**
- * _strncat - similar to _strcat but with bytes
- * @dest: source string
- * @src: string to be concatenated
- * @n: number of bytes
+ * _strncat - add src to the dest str
+ * @dest: str to append
+ * @src: string to append
+ * @n: largest num of bytes to append
  *
- * Return: char
+ * Return: address of dest
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
 int i, j;
 
-i = 0;
-while (dest[i] != '\0')
+i = j = 0;
+while (*(dest + i))
 i++;
-for (j = 0; j < n; j++)
+while (j < n && *(src + j))
 {
 dest[i] = src[j];
 i++;
+j++;
 }
-if (dest[i - 1] != '\0')
-dest[i] = '\0';
+if (j < n)
+dest[i] = src[j];
 return (dest);
 }
