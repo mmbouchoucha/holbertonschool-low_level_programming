@@ -2,17 +2,17 @@
 #include "holberton.h"
 
 /**
- * malloc_checked - allocate memory using malloc
- * @b: amount of memory
+ * malloc_checked - allocate memo using malloc
+ * @b: amount of memo
  *
- * Return: pointer to allocated memory
+ * Return: p to alloc memo
  */
 void *malloc_checked(unsigned int b)
 {
-  void *mem;
+void *mem;
 
-  mem = malloc(b);
-  if (mem == NULL)
-    exit(98);
-  return (mem);
+mem = malloc(b);
+if (mem == NULL)
+exit(98);
+return (mem);
 }
