@@ -1,53 +1,26 @@
 #include "3-calc.h"
 #include <stdio.h>
 /**
- * op_add - func add
- * @a: int
- * @b: int
+ * get_op_func - func p
+ * @s: char p
  * Return: int
  */
-int op_add(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
-  return (a + b);
+op_t ops[] = {
+{"+", op_add},
+{"-", op_sub},
+{"*", op_mul},
+{"/", op_div},
+{"%", op_mod},
+{NULL, NULL}
+};
+int i = 0;
+while (i < 5)
+{
+if (s && s[0] == ops[i].op[0] && !s[1])
+return (ops[i].f);
+i++;
 }
-
-/**
- * op_sub - func sub
- * @a: int
- * @b: int
- * Return: int
- */
-int op_sub(int a, int b)
-{
-  return (a - b);
-}
-/**
- * op_mul - func multiplies
- * @a: int
- * @b: int
- * Return: int
- */
-int op_mul(int a, int b)
-{
-  return (a * b);
-}
-/**
- * op_div - func div
- * @a: int
- * @b: int
- * Return: int
- */
-int op_div(int a, int b)
-{
-  return (a / b);
-}
-/**
- * op_mod - func modulo
- * @a: int
- * @b: int
- * Return: int
- */
-int op_mod(int a, int b)
-{
-  return (a % b);
+return (NULL);
 }
