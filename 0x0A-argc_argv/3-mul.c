@@ -2,27 +2,20 @@
 #include <stdlib.h>
 
 /**
- * main - multiply
- * @argc: argument
- * @argv: pointers
+ * main - multiplies two nums
+ * @argc: num of args passed to the func
+ * @argv: arg vector of p to strs
  *
- * Return: 0
+ * Return: 0 if no errors, else 1
  */
 int main(int argc, char *argv[])
 {
-int i_1, i_2, sum;
-
-if (argc == 3)
+if (argc != 3)
 {
-i_1 = atoi(argv[1]);
-i_2 = atoi(argv[2]);
-sum = i_1 * i_2;
-printf("%d\n", sum);
-}
-else
-{
-printf("%s\n", "Error");
+puts("Error");
 return (1);
 }
+
+printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 return (0);
 }

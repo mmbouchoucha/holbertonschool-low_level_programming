@@ -1,28 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
- * main - multiply
- * @argc: arguments
- * @argv: pointers
+ * main - adds nums
+ * @argc: num of args passed to the func
+ * @argv: arg vector of p to strs
  *
- * Return: 0
+ * Return: 0 if no errors, else 1
  */
-int main(int argc, char *argv[])
+int main(int argc, char const *argv[])
 {
-int i_1, i_2, sum;
+int i, j, sum = 0;
 
-if (argc == 3)
+for (i = 1; i < argc; i++)
 {
-i_1 = atoi(argv[1]);
-i_2 = atoi(argv[2]);
-sum = i_1 * i_2;
-printf("%d\n", sum);
-}
-else
+for (j = 0; argv[i][j]; j++)
 {
-printf("%s\n", "Error");
+if (!isdigit(argv[i][j]))
+{
+puts("Error");
 return (1);
 }
+}
+sum += atoi(argv[i]);
+}
+printf("%d\n", sum);
 return (0);
 }
